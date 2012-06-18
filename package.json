@@ -1,0 +1,33 @@
+{
+  "name": "spritefy",
+  "description": "Command line build tool for spritesheet generation",
+  "version": "0.0.1",
+  "author": "Giulian Drimba (http://giuliandrimba.com.com/)",
+  "homepage": "https://github.com/giuliandrimba/spritefy",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/giuliandrimba/spritefy"
+  },
+  "bugs": {
+    "url" : "https://github.com/giuliandrimba/spritefy/issues"
+  },
+  "main": "lib/spritefy",
+  "engines": {
+    "node": ">= 0.6.0"
+  },
+  "bin"            : {
+    "spritefy"        : "./bin/spritefy"
+  },
+  "keywords": [
+    "spritesheet",
+    "sprite",
+    "imagemagick",
+    "generator",
+    "tool"
+  ],
+  "dependencies": {
+    "easyimage": "~0.1.3",
+    "commander": "~0.6.1"
+  },
+  "devDependencies": {}
+}
