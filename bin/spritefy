@@ -1,0 +1,25 @@
+#!/usr/bin/env node
+
+var path = require("path")
+var fs = require("fs")
+
+var lib = path.join(path.dirname(fs.realpathSync(__filename)), '../lib');
+var Spritefy = require(lib + '/spritefy')
+var program = require('commander');
+
+program
+  .version('0.0.1')
+  .usage('-g sprite_name image_path')
+  .option('-g, --generate', 'Generate Spritesheet')
+  .option('-n, --sprite-name <n>', 'The name of the spritesheet')
+  .option('-p, --images-path <n>', 'Path of the folder with the images')
+  .parse(process.argv);
+
+if(program.generate)
+{
+	if(program.spriteName && program.imagesPath)
+	{
+		sprite = new Spritefy();
+		sprite.generate(program.imagesPath, program.spriteName);
+	}
+}
