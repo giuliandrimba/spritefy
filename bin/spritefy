@@ -5,6 +5,7 @@ var fs = require("fs")
 
 var lib = path.join(path.dirname(fs.realpathSync(__filename)), '../lib');
 var Spritefy = require(lib + '/spritefy')
+
 var program = require('commander');
 
 program

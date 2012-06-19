@@ -9,7 +9,7 @@ class Files
 	images:[]
 	pubsub: new app.utils.PubSub;
 	count = 0
-
+	
 	constructor:(@folder_path)->
 		@get_images()
 
@@ -21,6 +21,7 @@ class Files
 			throw err if err
 
 			for file, i in files
+
 				is_image = pattern.test file
 
 				if is_image
