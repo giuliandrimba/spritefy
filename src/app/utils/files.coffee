@@ -9,7 +9,7 @@ class Files
 	images:[]
 	pubsub: new app.utils.PubSub;
 	count = 0
-	
+
 	constructor:(@folder_path)->
 		@get_images()
 
@@ -18,6 +18,7 @@ class Files
 		pattern = new RegExp ".*(jpg|png|gif)$"
 
 		fs.readdir @folder_path, (err, files)=>
+
 			throw err if err
 
 			for file, i in files
@@ -27,9 +28,8 @@ class Files
 				if is_image
 					@images.push {file:"#{@folder_path}/#{file}"}
 
-			@setup_images(=>
+			@setup_images =>
 				@pubsub.trigger("complete",@images)
-				)
 
 	setup_images:(callback)->
 
@@ -37,18 +37,14 @@ class Files
 
 			throw err if err
 
-			@images[count].width = parseInt file.width
-			@images[count].height = parseInt file.height
-			@images[count].size = file.size
-			@images[count].type = file.type
-			@images[count].file = "#{@folder_path}/#{file.name}"
+			(img = @images[count]).width = parseInt file.width
+			img.height = parseInt file.height
+			img.size = file.size
+			img.type = file.type
+			img.file = "#{@folder_path}/#{file.name}"
 
-			count++
-
-			if count < @images.length
-				@setup_images(callback)
-				return
-
+			return @setup_images callback if ++count < @images.length
+			
 			callback() if count >= @images.length
 
 	bind:(event, callback)=>
