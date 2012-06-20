@@ -25,7 +25,7 @@ class StyleBuilder
 
 		@animation_time = (@images.length*1)/30
 
-		if @min is false
+		if @min is undefined
 			@file_text += """\n
 			.#{@name}
 			{
