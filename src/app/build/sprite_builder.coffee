@@ -1,6 +1,4 @@
-#<< app/utils/pubsub
-
-exec = require("child_process").exec
+easyimage = require "easyimage"
 
 class SpriteBuilder
 
@@ -10,7 +8,6 @@ class SpriteBuilder
 	sprite_path:""
 	files_path:[]
 	files_list:[]
-	pubsub:new app.utils.PubSub
 
 	constructor:(@images, @name)->
 
@@ -19,14 +16,15 @@ class SpriteBuilder
 
 		@list_files = @files_path.join(" ")
 
-	build:(images_path)=>
+	build:(images_path, callback)=>
 		@sprite_path = path.resolve("#{images_path}/../sprites")
 
 		if path.existsSync("#{@sprite_path}/#{@name}.png")
 			fs.unlink "#{@sprite_path}/#{@name}.png"
 
 		cmd = "convert #{@list_files} -transparent white -background None +append #{@sprite_path}/#{@name}.png";
-		exec cmd, (err, stdout, stderr)=>
+
+		easyimage.exec cmd, (err, stdout, stdin)=>
 			throw err if err
-			
-			# @pubsub.trigger("complete")
+
+			callback() if callback

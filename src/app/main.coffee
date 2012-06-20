@@ -1,6 +1,6 @@
 #<< app/build/sprite_builder
 #<< app/build/style_builder
-#<< app/utils/files
+#<< app/utils/images_filter
 
 fs = require "fs"
 program = require "commander"
@@ -9,22 +9,33 @@ class Main
 
 	folder:""
 	name:"sprite"
+	builds_concluded:0
+	min:false
+	messages:
+		success:"Spritesheet and Stylesheet generation completed!"
 
 	constructor:->
-
 		
-	generate:(@folder,@name)->
+	generate:(@folder,@name,@min)->
+
 		@folder = path.resolve(@folder)
-		@files = new app.utils.Files @folder
-		@files.bind("complete",@generate_style)
-		@files.bind("complete",@generate_sprite)
+		@images_filter = new app.utils.ImagesFilter @folder
+		@images_filter.bind("complete",@generate_style)
+		@images_filter.bind("complete",@generate_sprite)
 
 	generate_style:(images)=>
-		@style = new app.build.StyleBuilder(images,@name)
-		@style.build @folder
+		@style = new app.build.StyleBuilder(images,@name,@min)
+		@style.build @folder, @build_finished
 
 	generate_sprite:(images)=>
 		@sprite = new app.build.SpriteBuilder(images,@name)
-		@sprite.build @folder
+		@sprite.build @folder, @build_finished
+
+	build_finished:=>
+		++@builds_concluded
+
+		if @builds_concluded >= 2
+			console.log @messages.success
+
 
 module.exports = app.Main;
