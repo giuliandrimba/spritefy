@@ -1,15 +1,15 @@
 {
-  "name": "spritefy",
-  "description": "Command line build tool for spritesheet generation",
-  "version": "0.0.1",
+  "name": "spritefy-build",
+  "description": "Command line build tool for spritesheet and css animations generation",
+  "version": "0.5.0",
   "author": "Giulian Drimba (http://giuliandrimba.com.com/)",
-  "homepage": "https://github.com/giuliandrimba/spritefy",
+  "homepage": "https://github.com/giuliandrimba/spritefy-build.git",
   "repository": {
     "type": "git",
-    "url": "git://github.com/giuliandrimba/spritefy"
+    "url": "git://github.com/giuliandrimba/spritefy-build.git"
   },
   "bugs": {
-    "url" : "https://github.com/giuliandrimba/spritefy/issues"
+    "url" : "https://github.com/giuliandrimba/spritefy-build.git"
   },
   "main": "lib/spritefy",
   "engines": {
