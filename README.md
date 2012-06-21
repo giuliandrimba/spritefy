@@ -1,3 +1,7 @@
+# Spritefy-Build
+
+Spritefy-Build is a command line tool to generate images spritesheet and css3 animations.
+
 Version 0.5
 
 ## Requirements
@@ -10,13 +14,18 @@ Version 0.5
 [NodeJS]: http://nodejs.org/ "NodeJS"
 [NPM]: http://npmjs.org/ "NPM"
 
-# Spritefy-Build
-
-Spritefy-Build is a command line tool to generate images spritesheet and css3 animations.
-
 # Installation
 
 	npm install -g spritefy-build
+	
+## Browser support
+
+1. Safari 5.1+
+2. Firefox 11+
+3. Opera 11.62+
+4. Chrome 18+
+
+No toy for you IE (Internet Explorer doesn't support css animations)
 
 # Usage
 
