@@ -1,5 +1,11 @@
 Version 0.5
 
+## Requirements
+
+[ImageMagick]: http://www.imagemagick.org/script/download.php "ImageMagick"
+[NodeJS]: http://nodejs.org/ "NodeJS"
+[NPM]: http://npmjs.org/ "NPM"
+
 # Spritefy-Build
 
 Spritefy-Build is a command line tool to generate images spritesheet and css3 animations.
@@ -40,7 +46,7 @@ To test the animation, just create an HTML file, load the css file into it, and 
 
 # Compress option
 
-If you want to compress the css file generate to optimize file size, run the command with the **-c** option, eg:
+If you want to compress the css file generated to optimize file size, run the command with the **-c** option, eg:
 
 	spritefy -s sprite -d img/ -c
 
