@@ -2,6 +2,10 @@ Version 0.5
 
 ## Requirements
 
+1. [ImageMagick]
+2. [NodeJS]
+3. [NPM]
+
 [ImageMagick]: http://www.imagemagick.org/script/download.php "ImageMagick"
 [NodeJS]: http://nodejs.org/ "NodeJS"
 [NPM]: http://npmjs.org/ "NPM"
@@ -52,4 +56,6 @@ If you want to compress the css file generated to optimize file size, run the co
 
 ## Spritefy-Animation
 
-To have more control of the animation, you could use the jQuery plugin [Spritefy-Animation]: https://github.com/giuliandrimba/spritefy-animation "Spritefy Animation"
+To have more control of the animation, you could use the jQuery plugin [Spritefy-Animation]
+
+[Spritefy-Animation]: https://github.com/giuliandrimba/spritefy-animation "Spritefy Animation"
