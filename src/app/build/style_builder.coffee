@@ -32,29 +32,17 @@ class StyleBuilder
 				-moz-animation-duration: #{@animation_time}s;
 				-moz-animation-name: #{@name};
 				-moz-animation-timing-function: step-end;
-				-moz-animation-iteration-count:once;
-				-moz-animation-fill-mode: forwards;
+				-moz-animation-iteration-count:infinite;
+				-moz-animation-fill-mode: backwards;
 				-webkit-animation-duration: #{@animation_time}s;
 				-webkit-animation-name: #{@name};
 				-webkit-animation-timing-function: step-end;
-				-webkit-animation-iteration-count:once;
-				-webkit-animation-fill-mode: forwards;
+				-webkit-animation-iteration-count:infinite;
+				-webkit-animation-fill-mode: backwards;
 				background-image:url('#{@name}.png');
 				display: block;
 				width:#{@images[0].width}px;
 				height:#{@images[0].height}px;
-			}
-
-			.#{@name}-pause
-			{
-				-webkit-animation-play-state:paused;
-				-moz-animation-play-state:paused;
-			}
-
-			.#{@name}-play
-			{
-				-webkit-animation-play-state:running;
-				-moz-animation-play-state:running;
 			}
 
 			"""
