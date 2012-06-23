@@ -66,7 +66,7 @@ If you want to compress the css file generated to optimize file size, run the co
 [See the Examples]
 ---------------------
 
-[See the Examples]: file:///Users/giuliandrimba/Desktop/spritefy-build/index.html "See the examples"
+[See the Examples]: http://www.giuliandrimba.com/labs/spritefy-build/ "See the examples"
 
 ## Spritefy-Animation
 
