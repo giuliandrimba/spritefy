@@ -9,7 +9,7 @@ var lib = path.join(path.dirname(fs.realpathSync(__filename)), '../lib');
 var Spritefy = require(lib + '/spritefy')
 
 program
-  .version('0.5.1')
+  .version('0.5.3')
   .usage('-s sprite_name -c[optional] true -d images_dir/')
   .option('-s, --sprite-name <n>', 'The name of the spritesheet')
   .option('-d, --images-dir <n>', 'Path of the folder with the images')

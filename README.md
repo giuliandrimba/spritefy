@@ -63,6 +63,11 @@ If you want to compress the css file generated to optimize file size, run the co
 
 	spritefy -s sprite -d img/ -c
 
+[See the Examples]
+---------------------
+
+[See the Examples]: file:///Users/giuliandrimba/Desktop/spritefy-build/index.html "See the examples"
+
 ## Spritefy-Animation
 
 To have more control of the animation, you could use the jQuery plugin [Spritefy-Animation]

@@ -16,7 +16,7 @@ class Main
 
 	constructor:->
 		
-	generate:(@folder,@name,@min)->
+	generate:(@folder,@name,@min,quality)->
 
 		@folder = path.resolve(@folder)
 		@images_filter = new app.utils.ImagesFilter @folder
