@@ -53,7 +53,7 @@ And run the spritefy command:
 
 It will generate a folder called "sprites" in "~/Desktop/animations/sprites", containing 2 files: sprite.png and sprite.css
 
-To test the animation, just create an HTML file, load the css file into it, and assign a class to an element, where the name of the class is the name of the sprite, eg:
+To test the animation, just create an HTML file, load the css file into it, and assign a class to an element, where the name of the class is the name of the [sprite]-animation, eg:
 
 	<div class="sprite-animation"></div>
 
