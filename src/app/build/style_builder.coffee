@@ -29,6 +29,14 @@ class StyleBuilder
 			@file_text += """\n
 			.#{@name}
 			{
+				background-image:url('#{@name}.png');
+				display: block;
+				width:#{@images[0].width}px;
+				height:#{@images[0].height}px;
+			}
+
+			.#{@name}-animation
+			{
 				-moz-animation-duration: #{@animation_time}s;
 				-moz-animation-name: #{@name};
 				-moz-animation-timing-function: step-end;
@@ -39,10 +47,6 @@ class StyleBuilder
 				-webkit-animation-timing-function: step-end;
 				-webkit-animation-iteration-count:infinite;
 				-webkit-animation-fill-mode: backwards;
-				background-image:url('#{@name}.png');
-				display: block;
-				width:#{@images[0].width}px;
-				height:#{@images[0].height}px;
 			}
 
 			"""
@@ -84,8 +88,6 @@ class StyleBuilder
 					#{step}%
 					{
 						background-position: #{position}px;
-						width: #{image.width}px;
-						height: #{image.height}px;
 					}
 				""".replace /(^)(.*)$/gm, "\t$1$2"
 		
