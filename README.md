@@ -16,7 +16,7 @@ Version 0.5.6
 
 # Installation
 
-	npm install -g spritefy-build
+	npm install -g spritefy
 	
 ## Browser support
 
