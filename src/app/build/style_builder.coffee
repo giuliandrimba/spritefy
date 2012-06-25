@@ -37,6 +37,10 @@ class StyleBuilder
 
 			.#{@name}-animation
 			{
+				background-image:url('#{@name}.png');
+				display: block;
+				width:#{@images[0].width}px;
+				height:#{@images[0].height}px;
 				-moz-animation-duration: #{@animation_time}s;
 				-moz-animation-name: #{@name};
 				-moz-animation-timing-function: step-end;
