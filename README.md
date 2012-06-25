@@ -35,7 +35,7 @@ On OSX, open Terminal, and type:
 
 Where **-s** is the name of the sprite and the css3 animation, and **-d** is the path to the directory which contains the images sequence.
 
-It will generate a folder called **sprites** in the same directory of the **images folder**, containing the image sprite and the css file with the animation of the sprite.
+It will generate a folder called **sprites**, containing the image sprite and the css file with the animation of the sprite, and a folder "scripts" containing the jQuery plugin to control the animation.
 
 ## Example
 
