@@ -17,7 +17,7 @@ class SpriteBuilder
 		@list_files = @files_path.join(" ")
 
 	build:(images_path, callback)=>
-		@sprite_path = path.resolve("#{images_path}/../sprites")
+		@sprite_path = path.resolve("sprites/")
 
 		if path.existsSync("#{@sprite_path}/#{@name}.png")
 			fs.unlink "#{@sprite_path}/#{@name}.png"

@@ -1,5 +1,6 @@
 #<< app/build/sprite_builder
 #<< app/build/style_builder
+#<< app/build/plugin_builder
 #<< app/utils/images_filter
 
 fs = require "fs"
@@ -22,6 +23,7 @@ class Main
 		@images_filter = new app.utils.ImagesFilter @folder
 		@images_filter.bind("complete",@generate_style)
 		@images_filter.bind("complete",@generate_sprite)
+		@generate_jquery_plugin()
 
 	generate_style:(images)=>
 		@style = new app.build.StyleBuilder(images,@name,@min)
@@ -30,6 +32,10 @@ class Main
 	generate_sprite:(images)=>
 		@sprite = new app.build.SpriteBuilder(images,@name)
 		@sprite.build @folder, @build_finished
+
+	generate_jquery_plugin:->
+		@plugin = new app.build.PluginBuilder
+		@plugin.build()
 
 	build_finished:=>
 		++@builds_concluded

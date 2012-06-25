@@ -51,7 +51,7 @@ And run the spritefy command:
 
 	spritefy -s sprite -d img/
 
-It will generate a folder called "sprites" in "~/Desktop/animations/sprites", containing 2 files: sprite.png and sprite.css
+It will generate a folder called "sprites" in "~/Desktop/animations/sprites", containing 2 files: sprite.png and sprite.css, and a folder called "scripts" which contains the jquery plugin to control the css animation.
 
 To test the animation, just create an HTML file, load the css file into it, and assign a class to an element, where the name of the class is the name of the [sprite]-animation, eg:
 
@@ -68,8 +68,72 @@ If you want to compress the css file generated to optimize file size, run the co
 
 [See the Examples]: http://www.giuliandrimba.com/labs/spritefy-build/ "See the examples"
 
-## Spritefy-Animation
+## Controlling the animation
 
-To have more control of the animation, you could use the jQuery plugin [Spritefy-Animation]
+You can control the animations using the jqyer plugin "jquery.spritefy.js" generated in the folder "scripts"
 
-[Spritefy-Animation]: https://github.com/giuliandrimba/spritefy-animation "Spritefy Animation"
+Version 0.5
+
+## Requirements
+
+1. [jQuery]
+
+[jQuery]: http://docs.jquery.com/Downloading_jQuery "jQuery"
+
+## Browser support
+1. Safari 5.1+
+2. Firefox 11+
+3. Opera 11.62+
+4. Chrome 18+
+
+No toy for you IE (Internet Explorer doesn't support css animations)
+
+
+# Usage
+
+	$(<el>).spritefy(<animation_name>,<options>);
+
+# Example
+
+	$("#my_el").spritefy("sprite",{duration:1,count:5,onComplete:function(){console.log("completed")}});
+
+# Options
+
+1. **duration:[number]** - Total duration in seconds of the animation (for each iteration)
+
+2. **delay:[number]** - Delay to start the animation
+
+3. **count:[number] || "infinite"** - How many times the animation will run, set "infinite" for infinite loop.
+
+# Controlling the animation
+
+After you initialize the spritefy in the element, you will have access to the following methods:
+
+1. **animation.play()** - Plays the current animation.
+
+		$("#my_el").animation.play()
+
+2. **animation.pause()** - Pauses the current animation.
+
+		$("#my_el").animation.pause()
+
+# Animation events
+
+You can set callbacks for the following animation events in the options:
+
+1. **onStart** - Triggered when the animation starts
+
+		$("#my_el").spritefy("sprite",{onStart:startHandle})
+
+2. **onIteration** - Triggered for each time the animation plays in the loop
+
+		$("#my_el").spritefy("sprite",{onIteration:iterationHandle})
+
+3. **onComplete** - Triggered when the animation ends
+
+		$("#my_el").spritefy("sprite",{onComplete:completeHandle})
+
+[See the Example]
+---------------------
+
+[See the Example]: http://www.giuliandrimba.com/labs/spritefy-animation/ "See the example"

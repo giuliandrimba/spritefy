@@ -15,7 +15,7 @@ class StyleBuilder
 	constructor:(@images,@name,@min)->
 
 	build:(images_path, callback)=>
-		css_path = path.resolve("#{images_path}/../sprites")
+		css_path = path.resolve("sprites")
 
 		if path.existsSync(css_path) is false
 			fs.mkdirSync css_path
