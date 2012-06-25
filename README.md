@@ -2,7 +2,7 @@
 
 Spritefy-Build is a command line tool to generate images spritesheet and css3 animations.
 
-Version 0.5
+Version 0.5.4
 
 ## Requirements
 
@@ -55,7 +55,7 @@ It will generate a folder called "sprites" in "~/Desktop/animations/sprites", co
 
 To test the animation, just create an HTML file, load the css file into it, and assign a class to an element, where the name of the class is the name of the sprite, eg:
 
-	<div class="sprite"></div>
+	<div class="sprite-animation"></div>
 
 # Compress option
 
