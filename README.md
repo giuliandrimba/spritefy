@@ -68,7 +68,7 @@ If you want to compress the css file generated to optimize file size, run the co
 
 [See the Examples]: http://www.giuliandrimba.com/labs/spritefy-build/ "See the examples"
 
-## Controlling the animation
+# Spritefy jQuery Plugin
 
 You can control the animations using the jQuery plugin "jquery.spritefy.js" generated in the folder "scripts"
 
