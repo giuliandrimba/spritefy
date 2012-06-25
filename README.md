@@ -1,8 +1,8 @@
-# Spritefy-Build
+# Spritefy
 
-Spritefy-Build is a command line tool to generate images spritesheet and css3 animations.
+Spritefy is a command line tool to generate images spritesheet and css3 animations.
 
-Version 0.5.5
+Version 0.5.6
 
 ## Requirements
 
@@ -70,7 +70,7 @@ If you want to compress the css file generated to optimize file size, run the co
 
 ## Controlling the animation
 
-You can control the animations using the jqyer plugin "jquery.spritefy.js" generated in the folder "scripts"
+You can control the animations using the jQuery plugin "jquery.spritefy.js" generated in the folder "scripts"
 
 Version 0.5
 
