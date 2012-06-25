@@ -2,7 +2,7 @@
 
 Spritefy-Build is a command line tool to generate images spritesheet and css3 animations.
 
-Version 0.5.4
+Version 0.5.5
 
 ## Requirements
 

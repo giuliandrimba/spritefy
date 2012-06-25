@@ -1,7 +1,7 @@
 {
   "name": "spritefy-build",
   "description": "Command line build tool for spritesheet and css animations generation",
-  "version": "0.5.4",
+  "version": "0.5.5",
   "author": "Giulian Drimba (http://giuliandrimba.com.com/)",
   "homepage": "https://github.com/giuliandrimba/spritefy-build.git",
   "repository": {
