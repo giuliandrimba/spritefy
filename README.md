@@ -51,7 +51,7 @@ And run the spritefy command:
 
 	spritefy -n sprite -s img/
 
-It will generate a folder called "sprites" in "~/Desktop/animations/sprites", containing 2 files: sprite.png and sprite.css, and a folder called "scripts" which contains the jquery plugin to control the css animation.
+It will generate a folder called "sprites" in "~/Desktop/animations/sprites", containing 3 files: sprite.png, sprite.css and sprite-compressed.css, and a folder called "scripts" which contains the jquery plugin to control the css animation.
 
 To test the animation, just create an HTML file, load the css file into it, and assign a class to an element, where the name of the class is the name of the [sprite]-animation, eg:
 
@@ -64,12 +64,6 @@ If you want to build the files at a specific folder, run the command with the **
 	spritefy -n sprite -s img/ -d img-test
 
 If the folder doesn't exist, it will be created.
-
-# Compress option
-
-If you want to compress the css file generated to optimize file size, run the command with the **-c** option, eg:
-
-	spritefy -n sprite -s img/ -c
 
 [See the Examples]
 ---------------------

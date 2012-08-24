@@ -15,7 +15,7 @@ suite.addBatch(
 	"A new spritesheet":
 		topic:()->
 			sprite = new Spritefy 
-			sprite.generate "images", "victor", false, "test", ()=>
+			sprite.generate "images", "victor", "test", ()=>
 				@callback()
 
 			undefined

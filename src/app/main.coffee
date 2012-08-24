@@ -18,7 +18,7 @@ class Main
 
 	constructor:->
 		
-	generate:(@folder,@name,@min,@at,@callback)->
+	generate:(@folder,@name,@at,@callback)->
 
 		@folder = path.resolve @folder
 
@@ -32,7 +32,7 @@ class Main
 		@generate_jquery_plugin()
 
 	generate_style:(images)=>
-		@style = new app.build.StyleBuilder images, @name, @min, @at
+		@style = new app.build.StyleBuilder images, @name, @at
 		@style.build @folder, @build_finished
 
 	generate_sprite:(images)=>
