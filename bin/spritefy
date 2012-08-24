@@ -10,10 +10,11 @@ var Spritefy = require(lib + '/spritefy')
 
 program
   .version('0.5.3')
-  .usage('-s sprite_name -c[optional] true -d images_dir/')
-  .option('-s, --sprite-name <n>', 'The name of the spritesheet')
-  .option('-d, --images-dir <n>', 'Path of the folder with the images')
+  .usage('-n sprite_name -s images_folder/ -d[optional] dest_folder/ -c[optional] true')
+  .option('-n, --name <n>', 'The name of the spritesheet')
+  .option('-s, --source <n>', 'Path of the folder with the images')
   .option('-c, --compress', 'Compress the CSS animation keyframes')
+  .option('-d, --dest <n>', 'Dest folder')
   .parse(process.argv);
 
 if(process.argv.length <= 2)
@@ -21,10 +22,9 @@ if(process.argv.length <= 2)
   console.log("Specify the sprite name and images dir. Run spritefy -h for more info")
 }
 
-
-if(program.spriteName && program.imagesDir)
+if(program.name && program.source)
 {
 	sprite = new Spritefy();
-  	console.log("generating spritesheet and stylesheet..")
-	sprite.generate(program.imagesDir, program.spriteName, program.compress);
+  console.log("generating spritesheet and stylesheet..")
+	sprite.generate(program.source, program.name, program.compress, program.dest);
 }

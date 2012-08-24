@@ -9,8 +9,8 @@ class PluginBuilder
 
 	new_path:path.resolve("scripts/")
 
-	constructor:->
-		
+	constructor:(@at)->
+		@new_path = path.resolve @at, "scripts" if @at
 
 	build:->
 

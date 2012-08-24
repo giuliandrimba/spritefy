@@ -1,0 +1,107 @@
+@-webkit-keyframes victor
+{	
+	
+	0%
+	{
+		background-position: 0px;
+	}	
+	
+	11.11111111111111%
+	{
+		background-position: -156px;
+	}	
+	
+	22.22222222222222%
+	{
+		background-position: -312px;
+	}	
+	
+	33.33333333333333%
+	{
+		background-position: -468px;
+	}	
+	
+	44.44444444444444%
+	{
+		background-position: -624px;
+	}	
+	
+	55.55555555555556%
+	{
+		background-position: -780px;
+	}	
+	
+	66.66666666666667%
+	{
+		background-position: -936px;
+	}	
+	
+	77.77777777777779%
+	{
+		background-position: -1092px;
+	}	
+	
+	88.8888888888889%
+	{
+		background-position: -1248px;
+	}	
+	
+	100%
+	{
+		background-position: -1248px;
+	}
+}
+@-moz-keyframes victor
+{	
+	
+	0%
+	{
+		background-position: 0px;
+	}	
+	
+	11.11111111111111%
+	{
+		background-position: -156px;
+	}	
+	
+	22.22222222222222%
+	{
+		background-position: -312px;
+	}	
+	
+	33.33333333333333%
+	{
+		background-position: -468px;
+	}	
+	
+	44.44444444444444%
+	{
+		background-position: -624px;
+	}	
+	
+	55.55555555555556%
+	{
+		background-position: -780px;
+	}	
+	
+	66.66666666666667%
+	{
+		background-position: -936px;
+	}	
+	
+	77.77777777777779%
+	{
+		background-position: -1092px;
+	}	
+	
+	88.8888888888889%
+	{
+		background-position: -1248px;
+	}	
+	
+	100%
+	{
+		background-position: -1248px;
+	}
+}
+.victor{-moz-animation-duration: 0.3s;-moz-animation-name: victor;-moz-animation-timing-function: step-end;-moz-animation-iteration-count:once;-moz-animation-fill-mode: forwards;-webkit-animation-duration: 0.3s;-webkit-animation-name: victor;	-webkit-animation-timing-function: step-end;-webkit-animation-iteration-count:once;-webkit-animation-fill-mode: forwards;background-image:url('victor.png');display: block;width:156px;height:167px;}.victor-pause{-webkit-animation-play-state:paused;-moz-animation-play-state:paused;}.victor-play{-webkit-animation-play-state:running;-moz-animation-play-state:running;}

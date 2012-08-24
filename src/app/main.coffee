@@ -5,6 +5,7 @@
 
 fs = require "fs"
 program = require "commander"
+path = require "path"
 
 class Main
 
@@ -17,24 +18,29 @@ class Main
 
 	constructor:->
 		
-	generate:(@folder,@name,@min,quality)->
+	generate:(@folder,@name,@min,@at,@callback)->
 
-		@folder = path.resolve(@folder)
+		@folder = path.resolve @folder
+
+		@at = path.resolve @at
+
+		fs.mkdirSync @at if !path.existsSync(@at)
+
 		@images_filter = new app.utils.ImagesFilter @folder
 		@images_filter.bind("complete",@generate_style)
 		@images_filter.bind("complete",@generate_sprite)
 		@generate_jquery_plugin()
 
 	generate_style:(images)=>
-		@style = new app.build.StyleBuilder(images,@name,@min)
+		@style = new app.build.StyleBuilder images, @name, @min, @at
 		@style.build @folder, @build_finished
 
 	generate_sprite:(images)=>
-		@sprite = new app.build.SpriteBuilder(images,@name)
+		@sprite = new app.build.SpriteBuilder images, @name, @at
 		@sprite.build @folder, @build_finished
 
 	generate_jquery_plugin:->
-		@plugin = new app.build.PluginBuilder
+		@plugin = new app.build.PluginBuilder @at
 		@plugin.build()
 
 	build_finished:=>
@@ -42,6 +48,7 @@ class Main
 
 		if @builds_concluded >= 2
 			console.log @messages.success
+			@callback?()
 
 
 module.exports = app.Main;

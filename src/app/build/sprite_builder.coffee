@@ -1,4 +1,5 @@
 easyimage = require "easyimage"
+path = require "path"
 
 class SpriteBuilder
 
@@ -9,7 +10,7 @@ class SpriteBuilder
 	files_path:[]
 	files_list:[]
 
-	constructor:(@images, @name)->
+	constructor:(@images, @name, @at)->
 
 		for image in @images
 			@files_path.push image.file
@@ -18,6 +19,7 @@ class SpriteBuilder
 
 	build:(images_path, callback)=>
 		@sprite_path = path.resolve("sprites/")
+		@sprite_path = path.resolve @at, "sprites" if @at
 
 		if path.existsSync("#{@sprite_path}/#{@name}.png")
 			fs.unlink "#{@sprite_path}/#{@name}.png"

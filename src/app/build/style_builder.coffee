@@ -12,10 +12,11 @@ class StyleBuilder
 	step_count:0
 	animation_time:1
 
-	constructor:(@images,@name,@min)->
+	constructor:(@images,@name,@min, @at)->
 
 	build:(images_path, callback)=>
-		css_path = path.resolve("sprites")
+		css_path = path.resolve "sprites"
+		css_path = path.resolve @at, "sprites" if @at
 
 		if path.existsSync(css_path) is false
 			fs.mkdirSync css_path
