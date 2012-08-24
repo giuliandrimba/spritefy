@@ -20,7 +20,7 @@ suite.addBatch(
 
 			undefined
 
-		"should build at right folder":(msg)->
+		"should build at right folder":(topic)->
 			
 			folder = path.resolve __dirname, "test"
 
@@ -41,6 +41,15 @@ suite.addBatch(
 
 			assert.deepEqual test, template
 
+		"should build right the stylesheet":(topic)->
+
+			tmpl_styl_path = path.resolve __dirname, "template/sprites/victor.css"
+			test_styl_path = path.resolve __dirname, "test/sprites/victor.css"
+
+			tmpl_styl = fs.readFileSync tmpl_styl_path, "utf8"
+			test_styl = fs.readFileSync tmpl_styl_path, "utf8"
+
+			assert.equal tmpl_styl, test_styl
 
 
 ).export module
