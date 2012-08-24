@@ -31,9 +31,9 @@ No toy for you IE (Internet Explorer doesn't support css animations)
 
 On OSX, open Terminal, and type:
 
-	spritefy -s <sprite_name> -d <images_dir>
+	spritefy -n <sprite_name> -s <source_folder>
 
-Where **-s** is the name of the sprite and the css3 animation, and **-d** is the path to the directory which contains the images sequence.
+Where **-n** is the name of the sprite and the css3 animation, and **-s** is the path to the directory which contains the images sequence.
 
 It will generate a folder called **sprites**, containing the image sprite and the css file with the animation of the sprite, and a folder **scripts** containing the jQuery plugin to control the animation.
 
@@ -49,7 +49,7 @@ I would open Terminal, navigate to the "animations" folder:
 
 And run the spritefy command:
 
-	spritefy -s sprite -d img/
+	spritefy -n sprite -s img/
 
 It will generate a folder called "sprites" in "~/Desktop/animations/sprites", containing 2 files: sprite.png and sprite.css, and a folder called "scripts" which contains the jquery plugin to control the css animation.
 
@@ -57,11 +57,19 @@ To test the animation, just create an HTML file, load the css file into it, and 
 
 	<div class="sprite-animation"></div>
 
+# Destination folder
+
+If you want to build the files at a specific folder, run the command with the **-d <dest_folder>** option, eg:
+
+	spritefy -n sprite -s img/ -d img-test
+
+If the folder doesn't exist, it will be created.
+
 # Compress option
 
 If you want to compress the css file generated to optimize file size, run the command with the **-c** option, eg:
 
-	spritefy -s sprite -d img/ -c
+	spritefy -n sprite -s img/ -c
 
 [See the Examples]
 ---------------------
