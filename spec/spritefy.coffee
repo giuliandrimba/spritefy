@@ -1,4 +1,5 @@
-vows = require "vows"
+vows = require("vows")
+
 assert = require "assert"
 path = require("path")
 fs = require("fs")
