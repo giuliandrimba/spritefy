@@ -2,7 +2,7 @@
 
 Spritefy is a command line tool to generate images spritesheet and css3 animations.
 
-Version 0.5.6
+Version 0.5.7
 
 ## Requirements
 
