@@ -7,7 +7,7 @@ fs = require "fs"
 program = require "commander"
 path = require "path"
 
-class Main
+class app.Main
 
 	folder:""
 	name:"sprite"

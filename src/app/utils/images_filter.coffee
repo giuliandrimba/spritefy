@@ -3,7 +3,7 @@
 fs = require "fs"
 easyimage = require "easyimage"
 
-class ImagesFilter
+class app.utils.ImagesFilter
 
 	folder_path=""
 	images:[]

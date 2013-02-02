@@ -1,7 +1,7 @@
 easyimage = require "easyimage"
 path = require "path"
 
-class SpriteBuilder
+class app.build.SpriteBuilder
 
 	images: []
 	name: ""

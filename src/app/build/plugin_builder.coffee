@@ -2,7 +2,7 @@ util = require "util"
 path = require "path"
 fs = require "fs"
 
-class PluginBuilder
+class app.build.PluginBuilder
 
 	plugin_file:path.join(path.dirname(fs.realpathSync(__filename)), '../spritefy-animation/jquery.spritefy.js')
 	plugin_file_min:path.join(path.dirname(fs.realpathSync(__filename)), '../spritefy-animation/jquery.spritefy.min.js')

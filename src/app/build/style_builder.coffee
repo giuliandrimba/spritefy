@@ -1,7 +1,7 @@
 fs = require "fs"
 path = require "path"
 
-class StyleBuilder
+class app.build.StyleBuilder
 
 	images: []
 	name: ""
