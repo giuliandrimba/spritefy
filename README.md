@@ -27,7 +27,7 @@ Version 0.5.7
 
 No toy for you IE (Internet Explorer doesn't support css animations)
 
-# Usage
+## Usage
 
 On OSX, open Terminal, and type:
 
@@ -57,7 +57,7 @@ To test the animation, just create an HTML file, load the css file into it, and 
 
 	<div class="sprite-animation"></div>
 
-# Destination folder
+## Destination folder
 
 If you want to build the files at a specific folder, run the command with the **-d <dest_folder>** option, eg:
 
@@ -91,15 +91,15 @@ Version 0.5
 No toy for you IE (Internet Explorer doesn't support css animations)
 
 
-# Usage
+## Usage
 
 	$(<el>).spritefy(<animation_name>,<options>);
 
-# Example
+## Example
 
 	$("#my_el").spritefy("sprite",{duration:1,count:5,onComplete:function(){console.log("completed")}});
 
-# Options
+## Options
 
 1. **duration:[number]** - Total duration in seconds of the animation (for each iteration)
 
@@ -107,7 +107,7 @@ No toy for you IE (Internet Explorer doesn't support css animations)
 
 3. **count:[number] || "infinite"** - How many times the animation will run, set "infinite" for infinite loop.
 
-# Controlling the animation
+## Controlling the animation
 
 After you initialize the spritefy in the element, you will have access to the following methods:
 
@@ -119,7 +119,7 @@ After you initialize the spritefy in the element, you will have access to the fo
 
 		$("#my_el").animation.pause()
 
-# Animation events
+## Animation events
 
 You can set callbacks for the following animation events in the options:
 
