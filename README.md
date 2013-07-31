@@ -14,7 +14,7 @@ Version 0.5.7
 [NodeJS]: http://nodejs.org/ "NodeJS"
 [NPM]: http://npmjs.org/ "NPM"
 
-# Installation
+## Installation
 
 	npm install -g spritefy
 	
