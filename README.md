@@ -139,3 +139,7 @@ You can set callbacks for the following animation events in the options:
 ---------------------
 
 [See the Example]: http://www.giuliandrimba.com/labs/spritefy-animation/ "See the example"
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/giuliandrimba/spritefy/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
